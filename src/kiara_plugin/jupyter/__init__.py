@@ -4,6 +4,8 @@
 
 import os
 
+from kiara_plugin.jupyter.utils import ensure_kiara_plugins  # noqa
+
 __author__ = """Markus Binsteiner"""
 __email__ = "markus@frkl.io"
 
