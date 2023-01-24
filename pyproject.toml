@@ -41,8 +41,8 @@ dynamic = ["version"]
 
 [project.optional-dependencies]
 kiara = [
-    "kiara>=0.4.28",
-    "kiara_plugin.tabular>=0.4.16",
+    "kiara>=0.4.29",
+    "kiara_plugin.tabular>=0.4.20",
 ]
 dev_documentation = [
     "kiara[dev_documentation]"

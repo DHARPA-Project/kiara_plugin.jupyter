@@ -5,4 +5,6 @@ OFFICIAL_KIARA_PLUGINS = [
     "onboarding",
     "network_analysis",
     "language_processing",
+    "html",
+    "streamlit",
 ]
