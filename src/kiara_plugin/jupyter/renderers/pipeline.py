@@ -10,13 +10,13 @@ from kiara.utils import log_message
 
 class PipelineRenderer(BaseJinjaRenderer[Pipeline, RenderInputsSchema]):
 
-    _renderer_name = "pipeline_renderer"
+    _renderer_name = "pipeline_notebook_renderer"
 
     _render_profiles = {"jupyter_notebook": {}}  # type: ignore
 
     def retrieve_jinja_env(self) -> JinjaEnv:
 
-        jinja_env = JinjaEnv(template_base="kiara")
+        jinja_env = JinjaEnv(template_base="kiara_plugin.jupyter")
         return jinja_env
 
     def get_template(self, render_config: RenderInputsSchema) -> Template:

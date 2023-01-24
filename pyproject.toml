@@ -56,6 +56,9 @@ dev_all = [
     "kiara[dev_all]"
 ]
 
+[project.entry-points."kiara.plugin"]
+jupyter = "kiara_plugin.jupyter"
+
 [project.entry-points."kiara.data_types"]
 jupyter = "kiara_plugin.jupyter.entrypoints:find_data_types"
 
