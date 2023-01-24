@@ -34,7 +34,7 @@ class PipelineRenderer(BaseJinjaRenderer[Pipeline, RenderInputsSchema]):
         return inputs
 
     @classmethod
-    def retrieve_supported_source_types(cls) -> List[Type[Any]]:
+    def retrieve_supported_python_classes(cls) -> List[Type[Any]]:
         return [Pipeline]
 
     def _post_process(self, rendered: str) -> str:
