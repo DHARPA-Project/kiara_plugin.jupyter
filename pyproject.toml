@@ -56,6 +56,22 @@ dev_all = [
     "kiara[dev_all]"
 ]
 
+[project.entry-points."kiara.data_types"]
+jupyter = "kiara_plugin.jupyter.entrypoints:find_data_types"
+
+[project.entry-points."kiara.model_classes"]
+jupyter = "kiara_plugin.jupyter.entrypoints:find_model_classes"
+
+[project.entry-points."kiara.modules"]
+jupyter = "kiara_plugin.jupyter.entrypoints:find_modules"
+
+[project.entry-points."kiara.pipelines"]
+jupyter = "kiara_plugin.jupyter.entrypoints:find_pipelines"
+
+[project.entry-points."kiara.renderers"]
+jupyter = "kiara_plugin.jupyter.entrypoints:find_renderer_classes"
+
+
 [project.urls]
 homepage = "https://github.com/DHARPA-Project/kiara_plugin.jupyter"
 documentation = "https://DHARPA-Project.github.io/kiara_plugin.jupyter"
