@@ -32,6 +32,9 @@ classifiers = [
 dependencies = [
     "importlib-metadata>=3.0.0.0,<7.0.0",
     "ipywidgets>=8.0.0",
+    "ipydagred3>=0.3.7",
+    "jupytext>=1.14.0",
+    "black>=21.0.0",
     "rich>=0.13.0.0",
 ]
 dynamic = ["version"]

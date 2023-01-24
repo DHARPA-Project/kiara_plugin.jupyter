@@ -14,6 +14,14 @@ class PipelineRenderer(BaseJinjaRenderer[Pipeline, RenderInputsSchema]):
 
     _render_profiles = {"jupyter_notebook": {}}  # type: ignore
 
+    @classmethod
+    def retrieve_supported_render_source(cls) -> str:
+        return "pipeline"
+
+    @classmethod
+    def retrieve_supported_python_classes(cls) -> List[Type[Any]]:
+        return [Pipeline]
+
     def retrieve_jinja_env(self) -> JinjaEnv:
 
         jinja_env = JinjaEnv(template_base="kiara_plugin.jupyter")
@@ -32,10 +40,6 @@ class PipelineRenderer(BaseJinjaRenderer[Pipeline, RenderInputsSchema]):
         inputs = render_config.dict()
         inputs["pipeline"] = instance
         return inputs
-
-    @classmethod
-    def retrieve_supported_python_classes(cls) -> List[Type[Any]]:
-        return [Pipeline]
 
     def _post_process(self, rendered: str) -> str:
 
