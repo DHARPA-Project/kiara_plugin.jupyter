@@ -41,9 +41,8 @@ dynamic = ["version"]
 
 [project.optional-dependencies]
 kiara = [
-    "kiara>=0.4.29",
-    "kiara_plugin.tabular>=0.4.20",
-    "kiara_plugin.onboarding>=0.4.2",
+    "kiara_plugin.tabular>=0.4.22",
+    "kiara_plugin.onboarding>=0.4.3",
     "kiara_plugin.html>=0.4.0"
 ]
 all_plugins = [
