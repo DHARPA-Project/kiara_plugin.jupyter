@@ -52,7 +52,6 @@ src/kiara_plugin/jupyter/version.txt
 public
 site
 .dephell_report
-.direnv
 .mypy_cache
 .env
 docs/api-documentation.md
@@ -64,3 +63,6 @@ onefile.spec
 ci/conda/**/build
 ci/conda/kiara_plugin.jupyter/meta.yaml
 .envrc.bak
++.pixi
++pixi.lock
++dev.py
