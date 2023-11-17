@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
-from typing import Any, Iterable, Mapping, Union
+from typing import Any, Iterable, Mapping, MutableMapping, Union
 
 from jinja2 import Template
+
 from kiara.models.module.pipeline.pipeline import Pipeline
 from kiara.renderers import RenderInputsSchema, SourceTransformer
 from kiara.renderers.included_renderers.pipeline import PipelineTransformer
@@ -38,7 +39,7 @@ class PipelineRenderer(BaseJinjaRenderer[Pipeline, RenderInputsSchema]):
         self, instance: Any, render_config: RenderInputsSchema
     ) -> Mapping[str, Any]:
 
-        inputs = render_config.dict()
+        inputs: MutableMapping[str, Any] = render_config.model_dump()
         inputs["pipeline"] = instance
         return inputs
 
@@ -49,14 +50,14 @@ class PipelineRenderer(BaseJinjaRenderer[Pipeline, RenderInputsSchema]):
             import jupytext
 
             notebook = jupytext.reads(rendered, fmt="py:percent")
-            converted = jupytext.writes(notebook, fmt="notebook")
+            converted: str = jupytext.writes(notebook, fmt="notebook")
             return converted
         else:
             try:
                 import black
                 from black import Mode  # type: ignore
 
-                cleaned = black.format_str(rendered, mode=Mode())
+                cleaned: str = black.format_str(rendered, mode=Mode())
                 return cleaned
 
             except Exception as e:

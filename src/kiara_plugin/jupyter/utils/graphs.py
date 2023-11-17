@@ -14,7 +14,7 @@ def graph_widget(
         pipeline = pipeline.structure  # type: ignore
 
     try:
-        import ipydagred3 as ipydagred3
+        import ipydagred3
     except Exception:
         raise Exception(
             "ipydagred3 not available, please install it manually into the current virtualenv"
@@ -37,13 +37,7 @@ def graph_widget(
 
     for edge in graph.edges:
         e = str(edge[0])
-        if e not in nodes_set:
-            print("MISSING")
-            print(e)
         e2 = str(edge[1])
-        if e2 not in nodes_set:
-            print("MISSING 2")
-            print(e2)
         g.setEdge(e, e2)
 
     widget = ipydagred3.DagreD3Widget(graph=g)

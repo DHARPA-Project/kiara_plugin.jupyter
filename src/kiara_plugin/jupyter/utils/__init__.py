@@ -46,12 +46,13 @@ def ensure_kiara_plugins(*plugins, update: bool = False):
     if not update:
         plugin_packages: List[str] = []
         pkgs = [p.replace("_", "-") for p in installed_packages.keys()]
-        for package_name in plugins:
-            if package_name.startswith("git:"):
-                package_name = package_name.replace("git:", "")
+        for _package_name in plugins:
+            if _package_name.startswith("git:"):
+                package_name = _package_name.replace("git:", "")
                 git = True
             else:
                 git = False
+                package_name = _package_name
             package_name = package_name.replace("_", "-")
             if not package_name.startswith("kiara-plugin."):
                 package_name = f"kiara-plugin.{package_name}"

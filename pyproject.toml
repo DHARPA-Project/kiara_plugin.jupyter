@@ -255,5 +255,8 @@ plugins = [
 
 # mypy per-module options:
 [[tool.mypy.overrides]]
-module = ["placholder.dummy.*"]
+module = [
+    "ipydagred3.*",
+    "jupytext.*"
+]
 ignore_missing_imports = true

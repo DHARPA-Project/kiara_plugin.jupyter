@@ -13,7 +13,6 @@ from kiara.utils.class_loading import (
     find_kiara_renderers_under,
     find_pipeline_base_path_for_module,
 )
-
 from kiara_plugin.jupyter import KIARA_METADATA
 
 find_modules: KiaraEntryPointItem = (
