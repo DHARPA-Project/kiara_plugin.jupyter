@@ -66,3 +66,5 @@ ci/conda/kiara_plugin.jupyter/meta.yaml
 +.pixi
 +pixi.lock
 +dev.py
+dev.ipynb
+test.ipynb
