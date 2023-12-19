@@ -72,12 +72,12 @@ class PipelineRenderer(BaseJinjaRenderer[Pipeline, JupyterNotebookRenderInputSch
         jinja_env = JinjaEnv(template_base="kiara_plugin.jupyter")
         return jinja_env
 
-    def get_template(self, render_config: RenderInputsSchema) -> Template:
+    def get_template(self, render_config: JupyterNotebookRenderInputSchema) -> Template:
 
         return self.get_jinja_env().get_template("pipeline/jupyter_notebook.ipynb.j2")
 
     def assemble_render_inputs(
-        self, instance: Any, render_config: RenderInputsSchema
+        self, instance: Any, render_config: JupyterNotebookRenderInputSchema
     ) -> Mapping[str, Any]:
 
         from kiara.utils.rendering import create_pipeline_render_inputs
