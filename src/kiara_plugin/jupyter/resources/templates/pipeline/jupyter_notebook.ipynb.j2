@@ -57,7 +57,7 @@ pipeline_input_{{ field_name }} = {{ pipeline_inputs[field_name] }}
 {%  if not step.manifest_src.module_config -%}
 step_operation_{{ step_id }} = kiara.get_operation('{{ step.manifest_src.module_type }}')
 {% else -%}
-step_config_{{ step_id }} = {{ step.manifest_src.module_dump() }}
+step_config_{{ step_id }} = {{ step.manifest_src.model_dump() }}
 step_operation_{{ step_id }} = kiara.get_operation(step_config_{{ step_id }})
 {% endif -%}
 step_operation_{{ step_id }}
