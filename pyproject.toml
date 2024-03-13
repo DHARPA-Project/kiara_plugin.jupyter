@@ -60,11 +60,6 @@ dynamic = ["version"]
 kiara = [
     "kiara_plugin.tabular>=0.5.1",
     "kiara_plugin.onboarding>=0.5.0",
-    "kiara_plugin.html>=0.5.0"
-]
-all_plugins = [
-    "kiara_plugin.network_analysis>=0.4.9",
-    "kiara_plugin.language_processing>=0.4.10"
 ]
 dev_documentation = [
     "kiara[dev_documentation]"

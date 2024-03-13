@@ -70,10 +70,10 @@ inputs_{{ step_id }} = {
 {%- endfor -%}
 }
 {%  if not step.manifest_src.module_config -%}
-results_{{ step_id }} = kiara.run_job(step_operation_{{ step_id }}, inputs=inputs_{{ step_id }})
+results_{{ step_id }} = kiara.run_job(step_operation_{{ step_id }}, inputs=inputs_{{ step_id }}, comment="")
 {% else -%}
 step_config_{{ step_id }} = {{ step.manifest_src.module_config }}
-results_{{ step_id }} = kiara.run_job(step_operation_{{ step_id }}, operation_config=step_config_{{ step_id }}, inputs=inputs_{{ step_id }})
+results_{{ step_id }} = kiara.run_job(step_operation_{{ step_id }}, operation_config=step_config_{{ step_id }}, inputs=inputs_{{ step_id }}, comment="")
 {%  endif -%}
 results_{{ step_id }}
 
