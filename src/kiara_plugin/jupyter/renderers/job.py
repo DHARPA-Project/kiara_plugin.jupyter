@@ -3,7 +3,7 @@ from typing import Any, Iterable, Mapping, Union
 
 from jinja2 import Template
 
-from kiara.interfaces.python_api import JobDesc
+from kiara.api import JobDesc
 from kiara.models.module.pipeline.pipeline import Pipeline
 from kiara.renderers import RenderInputsSchema, SourceTransformer
 from kiara.renderers.included_renderers.job import JobDescTransformer
