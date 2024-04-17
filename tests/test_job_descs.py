@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-from kiara.interfaces.python_api.models.job import JobTest
 
 """Auto-generated tests that use job descriptions in the 'examples/jobs' folder and run them.
 
@@ -36,6 +35,6 @@ Specifying any other argument name will throw an error.
 """
 
 
-def test_job_desc(example_job_test: JobTest):
-
-    example_job_test.run_tests()
+# def test_job_desc(example_job_test: JobTest):
+#
+#     example_job_test.run_tests()

@@ -252,6 +252,9 @@ plugins = [
 [[tool.mypy.overrides]]
 module = [
     "ipydagred3.*",
-    "jupytext.*"
+    "jupytext.*",
+    "appdirs.*",
+    "pyarrow.*",
+    "ruamel.*"
 ]
 ignore_missing_imports = true
