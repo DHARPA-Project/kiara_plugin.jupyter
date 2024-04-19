@@ -47,7 +47,6 @@ classifiers = [
     "Programming Language :: Python :: 3.11"
 ]
 dependencies = [
-<<<<<<< ours
     "importlib-metadata>=3.0.0.0,<8.0.0",
     "ipywidgets>=8.0.0",
     "ipydagred3>=0.3.7",
