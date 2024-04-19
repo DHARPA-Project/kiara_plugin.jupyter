@@ -66,6 +66,7 @@ dev_documentation = [
 ]
 dev_testing = [
     "kiara[dev_testing]",
+    "nbconvert>=7.16.0"
 ]
 dev_utils = [
     "kiara[dev_utils]",
