@@ -62,9 +62,15 @@ onefile.spec
 *_complete.zsh.zwc
 ci/conda/**/build
 ci/conda/kiara_plugin.jupyter/meta.yaml
+<<<<<<< ours
 .envrc.bak
 +.pixi
 +pixi.lock
 +dev.py
 dev.ipynb
 test.ipynb
+=======
+.pixi
+pixi.lock
+output/
+>>>>>>> theirs
