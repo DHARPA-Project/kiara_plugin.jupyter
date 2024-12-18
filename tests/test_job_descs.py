@@ -34,7 +34,9 @@ against the job results. You can control which arguments will be passed to the f
 Specifying any other argument name will throw an error.
 """
 
+from kiara.interfaces.python_api.models.job import JobTest
 
-# def test_job_desc(example_job_test: JobTest):
-#
-#     example_job_test.run_tests()
+
+def test_job_desc(example_job_test: JobTest):
+
+    example_job_test.run_tests()
